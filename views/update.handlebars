@@ -1,19 +1,28 @@
-{{! Create Post }}
+{{! Edit Blog Post Page }}
 <div class="container">
   <div class="row">
     <div class="col-md-10 mx-auto text-left">
 
-      <form class="createBlogPost">
+      <form class="createBlogPost" id="submitEdit">
         {{! POST }}
         {{! title }}
         <div class="mt-5 mb-3">
           <label class="form-label">Title</label>
-          <input class="form-control" id="titleInput" maxlength="50" />
+          <input
+            class="form-control"
+            id="titleInput"
+            maxlength="50"
+            value="{{title}}"
+          />
         </div>
         {{! body }}
         <div class="mb-3">
           <label class="form-label">Body</label>
-          <textarea class="form-control" id="bodyInput" rows="10"></textarea>
+          <textarea
+            class="form-control"
+            id="bodyInput"
+            rows="10"
+          >{{description}}</textarea>
         </div>
         {{! submit Btn }}
         <div class="text-center">
@@ -28,4 +37,4 @@
   </div>
 </div>
 
-<script src="/js/newPostHandler.js"></script>
+<script src="/js/submitNewEdit.js"></script>
